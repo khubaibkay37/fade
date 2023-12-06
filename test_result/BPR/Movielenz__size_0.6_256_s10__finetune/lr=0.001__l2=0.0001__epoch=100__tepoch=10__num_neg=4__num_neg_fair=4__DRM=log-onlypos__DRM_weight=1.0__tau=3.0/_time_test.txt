@@ -1,0 +1,3 @@
+pre-train	test batch collecting	period_1	period_2	period_3	period_4	period_5	period_6	period_7	period_8	period_9	
+1380.3353	102.3531	5.0382	5.1098	4.9388	4.9233	4.7512	4.9263	4.8604	5.0748	5.0816	
+23.0056	1.7059	0.0840	0.0852	0.0823	0.0821	0.0792	0.0821	0.0810	0.0846	0.0847	
