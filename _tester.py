@@ -4,18 +4,20 @@ import sys
 
 
 dataset = ['Movielenz']
+dataset = ['Modcloth']
 emb_algo = ['BPR']
 dyn_models = ['finetune']
 num_negs = [4]
 num_negs_fair = [4]
-DRMs = ['log-onlypos']
-DRM_weight = [1.0]
+DRMs = ['log']
+DRM_weight = [0.5]
+DRM_weight = [4.0]
 taus = [3.0]
 random_seeds = [2021]
 n_snapshots = 10
 split_type = 'size'
 tepochs = [10]
-gpu = 0
+gpu = 1
 batch_sizes = [256]
 lrs = [0.001]
 l2s = ['1e-04']

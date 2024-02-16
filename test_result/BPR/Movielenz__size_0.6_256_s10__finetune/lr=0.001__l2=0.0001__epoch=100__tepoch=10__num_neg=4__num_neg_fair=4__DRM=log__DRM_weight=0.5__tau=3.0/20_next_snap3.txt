@@ -1,0 +1,9 @@
+Top 20 Results
+ndcg1__overall	0.7578
+ndcg1__genders	-0.0127
+ndcg1__0	0.7548
+ndcg1__1	0.7675
+f1__overall	0.3038
+f1__genders	0.0167
+f1__0	0.3077
+f1__1	0.2910

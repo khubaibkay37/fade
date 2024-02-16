@@ -1,0 +1,218 @@
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=100__tepoch=10__num_neg=4__num_neg_fair=4__DRM=log__DRM_weight=0.5__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-02-15 22:14:42 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 1
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618688
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Epoch 1   loss=0.9541 ori_loss=0.6714 fair_loss=0.3466 [12.2 s] 
+INFO:root:Epoch 2   loss=0.8527 ori_loss=0.5700 fair_loss=0.3466 [14.1 s] 
+INFO:root:Epoch 3   loss=0.7942 ori_loss=0.5118 fair_loss=0.3461 [13.5 s] 
+INFO:root:Epoch 4   loss=0.7735 ori_loss=0.4915 fair_loss=0.3456 [13.3 s] 
+INFO:root:Epoch 5   loss=0.7668 ori_loss=0.4852 fair_loss=0.3452 [13.9 s] 
+INFO:root:Epoch 6   loss=0.7651 ori_loss=0.4833 fair_loss=0.3454 [14.3 s] 
+INFO:root:Epoch 7   loss=0.7648 ori_loss=0.4832 fair_loss=0.3452 [14.0 s] 
+INFO:root:Epoch 8   loss=0.7643 ori_loss=0.4828 fair_loss=0.3450 [13.9 s] 
+INFO:root:Epoch 9   loss=0.7649 ori_loss=0.4836 fair_loss=0.3449 [14.1 s] 
+INFO:root:Epoch 10  loss=0.7642 ori_loss=0.4827 fair_loss=0.3450 [14.4 s] 
+INFO:root:Epoch 11  loss=0.7651 ori_loss=0.4836 fair_loss=0.3451 [13.3 s] 
+INFO:root:Epoch 12  loss=0.7646 ori_loss=0.4831 fair_loss=0.3450 [13.9 s] 
+INFO:root:Epoch 13  loss=0.7643 ori_loss=0.4828 fair_loss=0.3451 [13.5 s] 
+INFO:root:Epoch 14  loss=0.7655 ori_loss=0.4840 fair_loss=0.3451 [12.8 s] 
+INFO:root:Epoch 15  loss=0.7647 ori_loss=0.4831 fair_loss=0.3452 [13.2 s] 
+INFO:root:Epoch 16  loss=0.7651 ori_loss=0.4835 fair_loss=0.3451 [13.0 s] 
+INFO:root:Epoch 17  loss=0.7644 ori_loss=0.4830 fair_loss=0.3450 [12.8 s] 
+INFO:root:Epoch 18  loss=0.7647 ori_loss=0.4830 fair_loss=0.3452 [13.4 s] 
+INFO:root:Epoch 19  loss=0.7646 ori_loss=0.4832 fair_loss=0.3449 [13.7 s] 
+INFO:root:Epoch 20  loss=0.7647 ori_loss=0.4831 fair_loss=0.3452 [12.3 s] 
+INFO:root:Epoch 21  loss=0.7643 ori_loss=0.4829 fair_loss=0.3450 [13.8 s] 
+INFO:root:Epoch 22  loss=0.7640 ori_loss=0.4826 fair_loss=0.3450 [12.9 s] 
+INFO:root:Epoch 23  loss=0.7641 ori_loss=0.4826 fair_loss=0.3450 [13.2 s] 
+INFO:root:Epoch 24  loss=0.7643 ori_loss=0.4828 fair_loss=0.3451 [13.0 s] 
+INFO:root:Epoch 25  loss=0.7644 ori_loss=0.4829 fair_loss=0.3450 [14.1 s] 
+INFO:root:Epoch 26  loss=0.7647 ori_loss=0.4832 fair_loss=0.3450 [14.4 s] 
+INFO:root:Epoch 27  loss=0.7645 ori_loss=0.4830 fair_loss=0.3451 [12.1 s] 
+INFO:root:Epoch 28  loss=0.7642 ori_loss=0.4827 fair_loss=0.3451 [13.6 s] 
+INFO:root:Epoch 29  loss=0.7639 ori_loss=0.4826 fair_loss=0.3449 [12.5 s] 
+INFO:root:Epoch 30  loss=0.7649 ori_loss=0.4834 fair_loss=0.3450 [13.8 s] 
+INFO:root:Epoch 31  loss=0.7639 ori_loss=0.4824 fair_loss=0.3450 [14.2 s] 
+INFO:root:Epoch 32  loss=0.7646 ori_loss=0.4831 fair_loss=0.3451 [14.3 s] 
+INFO:root:Epoch 33  loss=0.7649 ori_loss=0.4835 fair_loss=0.3449 [14.3 s] 
+INFO:root:Epoch 34  loss=0.7644 ori_loss=0.4829 fair_loss=0.3449 [14.3 s] 
+INFO:root:Epoch 35  loss=0.7643 ori_loss=0.4825 fair_loss=0.3454 [14.4 s] 
+INFO:root:Epoch 36  loss=0.7645 ori_loss=0.4831 fair_loss=0.3450 [12.9 s] 
+INFO:root:Epoch 37  loss=0.7644 ori_loss=0.4830 fair_loss=0.3450 [12.0 s] 
+INFO:root:Epoch 38  loss=0.7650 ori_loss=0.4835 fair_loss=0.3450 [12.4 s] 
+INFO:root:Epoch 39  loss=0.7646 ori_loss=0.4831 fair_loss=0.3451 [14.0 s] 
+INFO:root:Epoch 40  loss=0.7646 ori_loss=0.4832 fair_loss=0.3449 [14.4 s] 
+INFO:root:Epoch 41  loss=0.7642 ori_loss=0.4828 fair_loss=0.3450 [12.7 s] 
+INFO:root:Epoch 42  loss=0.7640 ori_loss=0.4825 fair_loss=0.3450 [13.6 s] 
+INFO:root:Epoch 43  loss=0.7643 ori_loss=0.4827 fair_loss=0.3452 [14.3 s] 
+INFO:root:Epoch 44  loss=0.7647 ori_loss=0.4832 fair_loss=0.3450 [13.2 s] 
+INFO:root:Epoch 45  loss=0.7649 ori_loss=0.4833 fair_loss=0.3451 [13.8 s] 
+INFO:root:Epoch 46  loss=0.7647 ori_loss=0.4832 fair_loss=0.3450 [14.1 s] 
+INFO:root:Epoch 47  loss=0.7646 ori_loss=0.4830 fair_loss=0.3451 [12.2 s] 
+INFO:root:Epoch 48  loss=0.7640 ori_loss=0.4825 fair_loss=0.3450 [14.1 s] 
+INFO:root:Epoch 49  loss=0.7648 ori_loss=0.4834 fair_loss=0.3450 [13.8 s] 
+INFO:root:Epoch 50  loss=0.7638 ori_loss=0.4824 fair_loss=0.3450 [14.3 s] 
+INFO:root:Epoch 51  loss=0.7646 ori_loss=0.4830 fair_loss=0.3452 [13.9 s] 
+INFO:root:Epoch 52  loss=0.7643 ori_loss=0.4829 fair_loss=0.3449 [14.1 s] 
+INFO:root:Epoch 53  loss=0.7646 ori_loss=0.4831 fair_loss=0.3450 [13.6 s] 
+INFO:root:Epoch 54  loss=0.7647 ori_loss=0.4834 fair_loss=0.3448 [11.8 s] 
+INFO:root:Epoch 55  loss=0.7642 ori_loss=0.4827 fair_loss=0.3450 [13.9 s] 
+INFO:root:Epoch 56  loss=0.7645 ori_loss=0.4830 fair_loss=0.3451 [13.6 s] 
+INFO:root:Epoch 57  loss=0.7646 ori_loss=0.4831 fair_loss=0.3450 [13.0 s] 
+INFO:root:Epoch 58  loss=0.7642 ori_loss=0.4829 fair_loss=0.3449 [13.4 s] 
+INFO:root:Epoch 59  loss=0.7642 ori_loss=0.4828 fair_loss=0.3450 [13.9 s] 
+INFO:root:Epoch 60  loss=0.7647 ori_loss=0.4833 fair_loss=0.3449 [13.0 s] 
+INFO:root:Epoch 61  loss=0.7644 ori_loss=0.4829 fair_loss=0.3451 [13.1 s] 
+INFO:root:Epoch 62  loss=0.7640 ori_loss=0.4826 fair_loss=0.3449 [13.0 s] 
+INFO:root:Epoch 63  loss=0.7645 ori_loss=0.4829 fair_loss=0.3451 [14.0 s] 
+INFO:root:Epoch 64  loss=0.7640 ori_loss=0.4826 fair_loss=0.3450 [13.2 s] 
+INFO:root:Epoch 65  loss=0.7639 ori_loss=0.4825 fair_loss=0.3449 [13.4 s] 
+INFO:root:Epoch 66  loss=0.7643 ori_loss=0.4827 fair_loss=0.3452 [13.3 s] 
+INFO:root:Epoch 67  loss=0.7643 ori_loss=0.4828 fair_loss=0.3450 [13.3 s] 
+INFO:root:Epoch 68  loss=0.7640 ori_loss=0.4825 fair_loss=0.3450 [12.6 s] 
+INFO:root:Epoch 69  loss=0.7639 ori_loss=0.4825 fair_loss=0.3449 [12.1 s] 
+INFO:root:Epoch 70  loss=0.7642 ori_loss=0.4829 fair_loss=0.3449 [14.1 s] 
+INFO:root:Epoch 71  loss=0.7640 ori_loss=0.4826 fair_loss=0.3449 [14.0 s] 
+INFO:root:Epoch 72  loss=0.7642 ori_loss=0.4827 fair_loss=0.3450 [13.3 s] 
+INFO:root:Epoch 73  loss=0.7649 ori_loss=0.4832 fair_loss=0.3452 [13.5 s] 
+INFO:root:Epoch 74  loss=0.7645 ori_loss=0.4830 fair_loss=0.3450 [13.7 s] 
+INFO:root:Epoch 75  loss=0.7641 ori_loss=0.4827 fair_loss=0.3450 [13.6 s] 
+INFO:root:Epoch 76  loss=0.7643 ori_loss=0.4828 fair_loss=0.3451 [13.9 s] 
+INFO:root:Epoch 77  loss=0.7647 ori_loss=0.4832 fair_loss=0.3450 [14.0 s] 
+INFO:root:Epoch 78  loss=0.7643 ori_loss=0.4830 fair_loss=0.3449 [14.3 s] 
+INFO:root:Epoch 79  loss=0.7640 ori_loss=0.4824 fair_loss=0.3451 [13.5 s] 
+INFO:root:Epoch 80  loss=0.7640 ori_loss=0.4827 fair_loss=0.3449 [13.7 s] 
+INFO:root:Epoch 81  loss=0.7637 ori_loss=0.4823 fair_loss=0.3450 [12.7 s] 
+INFO:root:Epoch 82  loss=0.7642 ori_loss=0.4827 fair_loss=0.3450 [12.6 s] 
+INFO:root:Epoch 83  loss=0.7640 ori_loss=0.4825 fair_loss=0.3451 [13.5 s] 
+INFO:root:Epoch 84  loss=0.7639 ori_loss=0.4825 fair_loss=0.3449 [14.4 s] 
+INFO:root:Epoch 85  loss=0.7643 ori_loss=0.4827 fair_loss=0.3451 [14.0 s] 
+INFO:root:Epoch 86  loss=0.7641 ori_loss=0.4826 fair_loss=0.3450 [13.1 s] 
+INFO:root:Epoch 87  loss=0.7636 ori_loss=0.4824 fair_loss=0.3448 [13.9 s] 
+INFO:root:Epoch 88  loss=0.7641 ori_loss=0.4825 fair_loss=0.3451 [12.0 s] 
+INFO:root:Epoch 89  loss=0.7643 ori_loss=0.4826 fair_loss=0.3453 [12.5 s] 
+INFO:root:Epoch 90  loss=0.7647 ori_loss=0.4832 fair_loss=0.3451 [12.0 s] 
+INFO:root:Epoch 91  loss=0.7639 ori_loss=0.4826 fair_loss=0.3449 [13.7 s] 
+INFO:root:Epoch 92  loss=0.7638 ori_loss=0.4825 fair_loss=0.3448 [14.3 s] 
+INFO:root:Epoch 93  loss=0.7639 ori_loss=0.4825 fair_loss=0.3450 [14.1 s] 
+INFO:root:Epoch 94  loss=0.7642 ori_loss=0.4827 fair_loss=0.3451 [13.6 s] 
+INFO:root:Epoch 95  loss=0.7635 ori_loss=0.4821 fair_loss=0.3450 [13.1 s] 
+INFO:root:Epoch 96  loss=0.7634 ori_loss=0.4817 fair_loss=0.3452 [13.8 s] 
+INFO:root:Epoch 97  loss=0.7642 ori_loss=0.4826 fair_loss=0.3452 [13.9 s] 
+INFO:root:Epoch 98  loss=0.7642 ori_loss=0.4828 fair_loss=0.3450 [14.3 s] 
+INFO:root:Epoch 99  loss=0.7632 ori_loss=0.4818 fair_loss=0.3450 [13.3 s] 
+INFO:root:Epoch 100 loss=0.7641 ori_loss=0.4825 fair_loss=0.3451 [13.6 s] 
+INFO:root:dyn_method: finetune
+INFO:root:test batch collecting: 103.02580142021179 s
+INFO:root:snap_idx: 0
+INFO:root:snap_idx: 1
+INFO:root:Epoch 1   loss=0.9292 ori_loss=0.5840 fair_loss=0.3479 
+INFO:root:Epoch 2   loss=0.7756 ori_loss=0.4313 fair_loss=0.3470 
+INFO:root:Epoch 3   loss=0.7248 ori_loss=0.3836 fair_loss=0.3438 
+INFO:root:Epoch 4   loss=0.7026 ori_loss=0.3641 fair_loss=0.3411 
+INFO:root:Epoch 5   loss=0.6911 ori_loss=0.3547 fair_loss=0.3390 
+INFO:root:Epoch 6   loss=0.6840 ori_loss=0.3492 fair_loss=0.3374 
+INFO:root:Epoch 7   loss=0.6790 ori_loss=0.3455 fair_loss=0.3361 
+INFO:root:Epoch 8   loss=0.6752 ori_loss=0.3427 fair_loss=0.3351 
+INFO:root:Epoch 9   loss=0.6721 ori_loss=0.3404 fair_loss=0.3342 
+INFO:root:Epoch 10  loss=0.6693 ori_loss=0.3384 fair_loss=0.3335 
+INFO:root:snap_idx: 2
+INFO:root:Epoch 1   loss=0.9277 ori_loss=0.5826 fair_loss=0.3451 
+INFO:root:Epoch 2   loss=0.7853 ori_loss=0.4404 fair_loss=0.3448 
+INFO:root:Epoch 3   loss=0.7287 ori_loss=0.3852 fair_loss=0.3435 
+INFO:root:Epoch 4   loss=0.7007 ori_loss=0.3588 fair_loss=0.3420 
+INFO:root:Epoch 5   loss=0.6856 ori_loss=0.3451 fair_loss=0.3405 
+INFO:root:Epoch 6   loss=0.6765 ori_loss=0.3372 fair_loss=0.3393 
+INFO:root:Epoch 7   loss=0.6705 ori_loss=0.3322 fair_loss=0.3383 
+INFO:root:Epoch 8   loss=0.6663 ori_loss=0.3288 fair_loss=0.3375 
+INFO:root:Epoch 9   loss=0.6630 ori_loss=0.3262 fair_loss=0.3368 
+INFO:root:Epoch 10  loss=0.6604 ori_loss=0.3242 fair_loss=0.3362 
+INFO:root:snap_idx: 3
+INFO:root:Epoch 1   loss=0.9301 ori_loss=0.6052 fair_loss=0.3462 
+INFO:root:Epoch 2   loss=0.8204 ori_loss=0.4959 fair_loss=0.3458 
+INFO:root:Epoch 3   loss=0.7683 ori_loss=0.4445 fair_loss=0.3450 
+INFO:root:Epoch 4   loss=0.7375 ori_loss=0.4148 fair_loss=0.3439 
+INFO:root:Epoch 5   loss=0.7193 ori_loss=0.3975 fair_loss=0.3429 
+INFO:root:Epoch 6   loss=0.7078 ori_loss=0.3870 fair_loss=0.3419 
+INFO:root:Epoch 7   loss=0.7001 ori_loss=0.3801 fair_loss=0.3410 
+INFO:root:Epoch 8   loss=0.6946 ori_loss=0.3752 fair_loss=0.3403 
+INFO:root:Epoch 9   loss=0.6903 ori_loss=0.3715 fair_loss=0.3397 
+INFO:root:Epoch 10  loss=0.6869 ori_loss=0.3686 fair_loss=0.3392 
+INFO:root:snap_idx: 4
+INFO:root:Epoch 1   loss=0.9324 ori_loss=0.6159 fair_loss=0.3458 
+INFO:root:Epoch 2   loss=0.8251 ori_loss=0.5093 fair_loss=0.3450 
+INFO:root:Epoch 3   loss=0.7677 ori_loss=0.4526 fair_loss=0.3442 
+INFO:root:Epoch 4   loss=0.7309 ori_loss=0.4167 fair_loss=0.3432 
+INFO:root:Epoch 5   loss=0.7081 ori_loss=0.3949 fair_loss=0.3422 
+INFO:root:Epoch 6   loss=0.6937 ori_loss=0.3814 fair_loss=0.3412 
+INFO:root:Epoch 7   loss=0.6840 ori_loss=0.3725 fair_loss=0.3403 
+INFO:root:Epoch 8   loss=0.6772 ori_loss=0.3664 fair_loss=0.3395 
+INFO:root:Epoch 9   loss=0.6721 ori_loss=0.3620 fair_loss=0.3387 
+INFO:root:Epoch 10  loss=0.6680 ori_loss=0.3586 fair_loss=0.3381 
+INFO:root:snap_idx: 5
+INFO:root:Epoch 1   loss=0.9379 ori_loss=0.6326 fair_loss=0.3451 
+INFO:root:Epoch 2   loss=0.8283 ori_loss=0.5230 fair_loss=0.3451 
+INFO:root:Epoch 3   loss=0.7683 ori_loss=0.4636 fair_loss=0.3444 
+INFO:root:Epoch 4   loss=0.7291 ori_loss=0.4252 fair_loss=0.3435 
+INFO:root:Epoch 5   loss=0.7046 ori_loss=0.4017 fair_loss=0.3425 
+INFO:root:Epoch 6   loss=0.6891 ori_loss=0.3870 fair_loss=0.3415 
+INFO:root:Epoch 7   loss=0.6786 ori_loss=0.3773 fair_loss=0.3406 
+INFO:root:Epoch 8   loss=0.6712 ori_loss=0.3706 fair_loss=0.3398 
+INFO:root:Epoch 9   loss=0.6656 ori_loss=0.3657 fair_loss=0.3391 
+INFO:root:Epoch 10  loss=0.6613 ori_loss=0.3619 fair_loss=0.3385 
+INFO:root:snap_idx: 6
+INFO:root:Epoch 1   loss=0.9183 ori_loss=0.6232 fair_loss=0.3456 
+INFO:root:Epoch 2   loss=0.8113 ori_loss=0.5167 fair_loss=0.3451 
+INFO:root:Epoch 3   loss=0.7529 ori_loss=0.4588 fair_loss=0.3444 
+INFO:root:Epoch 4   loss=0.7144 ori_loss=0.4211 fair_loss=0.3436 
+INFO:root:Epoch 5   loss=0.6903 ori_loss=0.3978 fair_loss=0.3427 
+INFO:root:Epoch 6   loss=0.6750 ori_loss=0.3832 fair_loss=0.3418 
+INFO:root:Epoch 7   loss=0.6648 ori_loss=0.3736 fair_loss=0.3410 
+INFO:root:Epoch 8   loss=0.6576 ori_loss=0.3669 fair_loss=0.3404 
+INFO:root:Epoch 9   loss=0.6522 ori_loss=0.3621 fair_loss=0.3398 
+INFO:root:Epoch 10  loss=0.6480 ori_loss=0.3583 fair_loss=0.3393 
+INFO:root:snap_idx: 7
+INFO:root:Epoch 1   loss=0.9301 ori_loss=0.6305 fair_loss=0.3478 
+INFO:root:Epoch 2   loss=0.8286 ori_loss=0.5291 fair_loss=0.3476 
+INFO:root:Epoch 3   loss=0.7711 ori_loss=0.4722 fair_loss=0.3469 
+INFO:root:Epoch 4   loss=0.7312 ori_loss=0.4332 fair_loss=0.3459 
+INFO:root:Epoch 5   loss=0.7051 ori_loss=0.4082 fair_loss=0.3446 
+INFO:root:Epoch 6   loss=0.6881 ori_loss=0.3923 fair_loss=0.3433 
+INFO:root:Epoch 7   loss=0.6764 ori_loss=0.3817 fair_loss=0.3421 
+INFO:root:Epoch 8   loss=0.6681 ori_loss=0.3743 fair_loss=0.3410 
+INFO:root:Epoch 9   loss=0.6619 ori_loss=0.3688 fair_loss=0.3401 
+INFO:root:Epoch 10  loss=0.6570 ori_loss=0.3647 fair_loss=0.3393 
+INFO:root:snap_idx: 8
+INFO:root:Epoch 1   loss=0.9593 ori_loss=0.6244 fair_loss=0.3456 
+INFO:root:Epoch 2   loss=0.8633 ori_loss=0.5287 fair_loss=0.3452 
+INFO:root:Epoch 3   loss=0.8102 ori_loss=0.4763 fair_loss=0.3445 
+INFO:root:Epoch 4   loss=0.7739 ori_loss=0.4407 fair_loss=0.3437 
+INFO:root:Epoch 5   loss=0.7499 ori_loss=0.4176 fair_loss=0.3429 
+INFO:root:Epoch 6   loss=0.7341 ori_loss=0.4025 fair_loss=0.3421 
+INFO:root:Epoch 7   loss=0.7232 ori_loss=0.3923 fair_loss=0.3413 
+INFO:root:Epoch 8   loss=0.7153 ori_loss=0.3851 fair_loss=0.3406 
+INFO:root:Epoch 9   loss=0.7094 ori_loss=0.3798 fair_loss=0.3401 
+INFO:root:Epoch 10  loss=0.7047 ori_loss=0.3756 fair_loss=0.3395 
+INFO:root:snap_idx: 9
+INFO:root:Epoch 1   loss=0.8863 ori_loss=0.5602 fair_loss=0.3392 
+INFO:root:Epoch 2   loss=0.8114 ori_loss=0.4864 fair_loss=0.3380 
+INFO:root:Epoch 3   loss=0.7708 ori_loss=0.4474 fair_loss=0.3363 
+INFO:root:Epoch 4   loss=0.7454 ori_loss=0.4234 fair_loss=0.3349 
+INFO:root:Epoch 5   loss=0.7293 ori_loss=0.4083 fair_loss=0.3338 
+INFO:root:Epoch 6   loss=0.7186 ori_loss=0.3985 fair_loss=0.3329 
+INFO:root:Epoch 7   loss=0.7112 ori_loss=0.3918 fair_loss=0.3322 
+INFO:root:Epoch 8   loss=0.7059 ori_loss=0.3870 fair_loss=0.3316 
+INFO:root:Epoch 9   loss=0.7019 ori_loss=0.3835 fair_loss=0.3311 
+INFO:root:Epoch 10  loss=0.6988 ori_loss=0.3808 fair_loss=0.3307 
+INFO:root:
+[24.9 m] 
+INFO:root:
+--------------------------------------------- END: 2024-02-15 22:41:00 ---------------------------------------------
