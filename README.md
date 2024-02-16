@@ -1,7 +1,10 @@
 # FADE
 The repository is the implementation of FADE: FAir Dynamic rEcommender
+10.5281/zenodo.10669097
 
 The Online Appendix is available at: https://sites.google.com/view/fade-www24/home.
+
+
 
 ## Requirements
 - python 37
