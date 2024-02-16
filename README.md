@@ -26,7 +26,7 @@ python python main.py --dataset 'Movielenz' --model_name 'BPR' --dyn_model 'fine
 - num_neg_fair: the number of negative items for the fairness loss
 - lr: learning rate
 - l2: l2 regularization
-- DRM: the type of fairness loss ('log-onlypos': L_{fair}, 'absolute-onlypos': L_{fair-abs})
+- DRM: the type of fairness loss ('log': L_{fair}, 'absolute': L_{fair-abs})
 - DRM_weight: \lambda (scaling parameter of fairness loss)
 - tau: \tau (the temperature parameter in the relaxed permutation matrix)
 - train_ratio: the ratio of pre-training data of the entire dataset
