@@ -1,7 +1,7 @@
 # FADE
-The repository is the implementation of FADE (FAir Dynamic rEcommender) proposed in the paper titled "Ensuring User-side Fairness in Dynamic Recommender Systems" (WWW'24): https://doi.org/10.1145/3589334.3645536
+The repository is the implementation of FADE (FAir Dynamic rEcommender) proposed in the paper titled "Ensuring User-side Fairness in Dynamic Recommender Systems" (WWW'24): https://doi.org/10.1145/3589334.3645536.
 
-The offical code DOI: 10.5281/zenodo.10669097
+The offical code DOI: https://doi.org/10.5281/zenodo.10669096.
 
 The Online Appendix: https://sites.google.com/view/fade-www24/home.
 
