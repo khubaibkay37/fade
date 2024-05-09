@@ -3,10 +3,10 @@ The repository is the implementation of **Version 1.0** of FADE (FAir Dynamic rE
 
 **NOTE: There are Version 1.5 and Version 2.0 with the key updates below. For exact replication, one may refer to this repository. However, for future works, consider using higher versions for their advantages.**
 
-### Key update in Version 1.5
+### Key update in Version 1.5: https://github.com/hsyoo32/fade_v1.5 
 * Flexibly using Dataloader during training with each data block, rather than relying on saved mini-batches on disk.
 
-### Key update in Version 2.0
+### Key update in Version 2.0: https://github.com/hsyoo32/fade_v2.0
 * Tests are based on Task-Next.
 * Using GPU-based and All-ranking tests, ensuring consideration of all items in Top-K recommendation tasks.
 * Using a validation set and early stop mechanism. Specifically, the first half of each subsequent data block is used for validation, while the second half is used for testing.
