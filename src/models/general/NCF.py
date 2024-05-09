@@ -9,10 +9,13 @@ class NCF(BPR):
     def parse_model_args(parser):
         parser.add_argument('--layers', type=str, default='[64, 64, 64, 64]',
                             help="Size of each layer.")
+        parser.add_argument('--dropout', type=float, default=0,
+                            help='Dropout probability for each deep layer')
         return BPR.parse_model_args(parser)
 
     def __init__(self, args, corpus):
         self.layers = eval(args.layers)
+        self.dropout = args.dropout
         super().__init__(args, corpus)
 
     def _define_params(self):
