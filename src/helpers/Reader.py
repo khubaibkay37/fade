@@ -47,6 +47,7 @@ class Reader(object):
         self.train_ratio = args.train_ratio
         self.batch_size = args.batch_size
         self.fname = args.fname
+        self.augmented_fname = "augmented_freq"
         self.s_fname = args.s_fname
         self.random_seed = args.random_seed
         self.n_snapshots = args.n_snapshots 
@@ -185,7 +186,11 @@ class Reader(object):
 
     def _read_data(self):
         logging.info('Reading data from \"{}\", dataset = \"{}\", suffix = \"{}\", fname = \"{}\" '.format(self.prefix, self.dataset, self.suffix, self.fname))
+        # We are reading freq.csv (Let that be default data)
+        
         self.df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
+        self.augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
+        self.augmented_data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         self.data_df = self.df.loc[:, ['user_id', 'item_id']]#.values.astype(np.int64) # (number of items, 2)
 
     def _save_user_clicked_set(self):
