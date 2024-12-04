@@ -236,7 +236,7 @@ class Model(torch.nn.Module):
             if self.phase == 'test':
                 index += self.train_boundary
 
-            user_id, item_id = torch.load(os.path.join(self.mini_batch_path, str(index)+'.pt')).T
+            user_id, item_id = torch.load(os.path.join(self.mini_batch_path, self.phase, str(index)+'.pt')).T
             neg_items = self._sample_neg_items(index*self.batch_size,
                                                 index*self.batch_size+len(user_id))
             item_id_ = torch.cat((item_id.reshape(-1, 1), neg_items), axis=-1)
