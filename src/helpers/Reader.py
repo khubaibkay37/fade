@@ -59,7 +59,8 @@ class Reader(object):
         #print(self.data_df['item_id'].max(),len(self.data_df['item_id'].unique()))
 
         #logging.info('Counting dataset statistics...')
-        self.n_users, self.n_items = self.data_df['user_id'].max()+1, self.data_df['item_id'].max()+1
+        self.n_users = self.data_df['user_id'].nunique()
+        self.n_items = self.data_df['item_id'].nunique()
         self.dataset_size = len(self.data_df)
         self.n_batches = math.ceil(self.dataset_size/self.batch_size)
         logging.info('"# user": {}, "# item": {}, "# entry": {}'.format(self.n_users, self.n_items, self.dataset_size))
@@ -157,6 +158,9 @@ class Reader(object):
         for idx, snap_boundary in enumerate(self.snap_boundaries):
             snapshot_train = self.data_df[:(self.n_train_batches + snap_boundary) * self.batch_size].values.astype(np.int64)
 
+            augmented_array = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_{idx}" +'.csv'), sep=self.sep).values.astype(np.int64)  # Let the main runner decide the ratio of train/test
+            snapshot_train = np.vstack([snapshot_train, augmented_array])
+
             if idx == 0:
                 gap = 0
             else:
@@ -188,9 +192,9 @@ class Reader(object):
         logging.info('Reading data from \"{}\", dataset = \"{}\", suffix = \"{}\", fname = \"{}\" '.format(self.prefix, self.dataset, self.suffix, self.fname))
         # We are reading freq.csv (Let that be default data)
         
+        # self.augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
+        # self.augmented_data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         self.df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
-        self.augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
-        self.augmented_data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         self.data_df = self.df.loc[:, ['user_id', 'item_id']]#.values.astype(np.int64) # (number of items, 2)
 
     def _save_user_clicked_set(self):
@@ -208,12 +212,29 @@ class Reader(object):
 
     def _save_mini_batch(self):
         self.mini_batch_path = os.path.join(self.prefix, self.dataset, self.suffix, self.s_fname, 'mini_batch')
+        self.mini_batch_test_path = os.path.join(self.prefix, self.dataset, self.suffix, self.s_fname, 'mini_batch', "test")
+        self.mini_batch_train_path = os.path.join(self.prefix, self.dataset, self.suffix, self.s_fname, 'mini_batch', "train")
         if not os.path.exists(self.mini_batch_path):
             os.mkdir(self.mini_batch_path)
 
+        if not os.path.exists(self.mini_batch_test_path):
+            os.mkdir(self.mini_batch_test_path)
+        if not os.path.exists(self.mini_batch_train_path):
+            os.mkdir(self.mini_batch_train_path)
+
+        augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_9" +'.csv'), sep=self.sep)
         for batch_idx in range(self.n_batches):
-            ui_batch = torch.from_numpy(self.data_df[batch_idx*self.batch_size:(batch_idx+1)*self.batch_size].values.astype(np.int64)) # (batch_size, 2)
-            torch.save(ui_batch, open(os.path.join(self.mini_batch_path, str(batch_idx)+'.pt'), 'wb'))
+            data_batch = self.data_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)
+            augmented_batch = augmented_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)
+
+            # Combine the two batches (vertical stack)
+            combined_batch = np.vstack([data_batch, augmented_batch])
+
+            # Convert the combined batch into a torch tensor
+            augmented_ui_batch = torch.from_numpy(combined_batch)
+            ui_batch = torch.from_numpy(data_batch) # (batch_size, 2)
+            torch.save(ui_batch, open(os.path.join(self.mini_batch_test_path, str(batch_idx)+'.pt'), 'wb'))
+            torch.save(augmented_ui_batch, open(os.path.join(self.mini_batch_train_path, str(batch_idx)+'.pt'), 'wb'))
 
     def _randint_w_exclude(self, clicked_set):
         randItem = randint(1, self.n_items-1)

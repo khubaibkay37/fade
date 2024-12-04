@@ -228,7 +228,7 @@ class Model(torch.nn.Module):
             return self.n_batches
 
         def __getitem__(self, index: int) -> dict:
-            current = self._get_feed_dict(index)
+            current = self._get_feed_dict(index, self.phase)
             return current
 
         def _get_feed_dict(self, index: int) -> dict:
