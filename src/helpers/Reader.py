@@ -79,7 +79,7 @@ class Reader(object):
 
         self.user_attr_path = os.path.join(self.prefix, self.dataset, self.suffix, 'user_attr')
 
-        del self.df
+        # del self.df
 
         logging.info('Done! [{:<.2f} s]'.format(time.time() - t0) + os.linesep)
 
@@ -158,13 +158,23 @@ class Reader(object):
         for idx, snap_boundary in enumerate(self.snap_boundaries):
             snapshot_train = self.data_df[:(self.n_train_batches + snap_boundary) * self.batch_size].values.astype(np.int64)
 
-            augmented_array = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_{idx}" +'.csv'), sep=self.sep).values.astype(np.int64)  # Let the main runner decide the ratio of train/test
-            snapshot_train = np.vstack([snapshot_train, augmented_array])
+            augmented_array = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_{idx}" +'.csv'), sep=" ").values.astype(np.int64)  # Let the main runner decide the ratio of train/test
+            augmented_array = pd.read_csv(
+            os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_{idx}" + '.csv'), 
+            sep=" "
+        )
+        
+        # Filter out rows where the first column has a value of 0
+        filtered_array = augmented_array[augmented_array.iloc[:, 0] != 0]
 
-            if idx == 0:
-                gap = 0
-            else:
-                gap = self.snap_boundaries[idx] - self.snap_boundaries[idx-1]
+        # Convert the filtered DataFrame to a NumPy array
+        augmented_array = filtered_array.values.astype(np.int64)
+        snapshot_train = np.vstack([snapshot_train, augmented_array])
+
+        if idx == 0:
+            gap = 0
+        else:
+            gap = self.snap_boundaries[idx] - self.snap_boundaries[idx-1]
             snapshot_train_new = self.data_df[(self.n_train_batches + gap) * self.batch_size:(self.n_train_batches + snap_boundary) * self.batch_size].values.astype(np.int64)
 
             snapshot_test = self.data_df[(self.n_train_batches + snap_boundary) * self.batch_size:].values.astype(np.int64)
@@ -194,8 +204,10 @@ class Reader(object):
         
         # self.augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         # self.augmented_data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
-        self.df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
-        self.data_df = self.df.loc[:, ['user_id', 'item_id']]#.values.astype(np.int64) # (number of items, 2)
+        self.data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.fname +'.csv'),
+                                   names=['user_id', 'item_id'],
+                                   sep=self.sep)  # Let the main runner decide the ratio of train/test
+        # self.data_df = self.df.loc[:, ['user_id', 'item_id']]#.values.astype(np.int64) # (number of items, 2)
 
     def _save_user_clicked_set(self):
         user_clicked_set_path = os.path.join(self.prefix, self.dataset, self.suffix, self.s_fname, 'user_clicked_set.txt')
@@ -222,19 +234,22 @@ class Reader(object):
         if not os.path.exists(self.mini_batch_train_path):
             os.mkdir(self.mini_batch_train_path)
 
-        augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_9" +'.csv'), sep=self.sep)
+        augmented_count = 0
+        augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_9" +'.csv'), sep=" ")
         for batch_idx in range(self.n_batches):
             data_batch = self.data_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)
             augmented_batch = augmented_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)
-
             # Combine the two batches (vertical stack)
-            combined_batch = np.vstack([data_batch, augmented_batch])
-
+            # combined_batch = np.vstack([data_batch, augmented_batch])
             # Convert the combined batch into a torch tensor
-            augmented_ui_batch = torch.from_numpy(combined_batch)
+            # augmented_ui_batch = torch.from_numpy(combined_batch)
             ui_batch = torch.from_numpy(data_batch) # (batch_size, 2)
             torch.save(ui_batch, open(os.path.join(self.mini_batch_test_path, str(batch_idx)+'.pt'), 'wb'))
-            torch.save(augmented_ui_batch, open(os.path.join(self.mini_batch_train_path, str(batch_idx)+'.pt'), 'wb'))
+            torch.save(ui_batch, open(os.path.join(self.mini_batch_train_path, str(augmented_count)+'.pt'), 'wb'))
+            augmented_count+=1
+            if augmented_batch.size == self.batch_size:
+                augmented_ui_batch = torch.from_numpy(augmented_batch) # (batch_size, 2)
+                torch.save(augmented_ui_batch, open(os.path.join(self.mini_batch_train_path, str(batch_idx*2+1)+'.pt'), 'wb'))
 
     def _randint_w_exclude(self, clicked_set):
         randItem = randint(1, self.n_items-1)
