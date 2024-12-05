@@ -158,9 +158,9 @@ class Reader(object):
         for idx, snap_boundary in enumerate(self.snap_boundaries):
             snapshot_train = self.data_df[:(self.n_train_batches + snap_boundary) * self.batch_size].values.astype(np.int64)
 
-            augmented_array = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_{idx}" +'.csv'), sep=" ").values.astype(np.int64)  # Let the main runner decide the ratio of train/test
+            augmented_array = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=" ").values.astype(np.int64)  # Let the main runner decide the ratio of train/test
             augmented_array = pd.read_csv(
-            os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_{idx}" + '.csv'), 
+            os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + '.csv'), 
             sep=" "
         )
         
@@ -235,7 +235,7 @@ class Reader(object):
             os.mkdir(self.mini_batch_train_path)
 
         augmented_count = 0
-        augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + f"_9" +'.csv'), sep=" ")
+        augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=" ")
         for batch_idx in range(self.n_batches):
             data_batch = self.data_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)
             augmented_batch = augmented_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)
