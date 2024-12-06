@@ -45,3 +45,309 @@ INFO:root:Epoch 1   loss=1.2138 ori_loss=0.5503 fair_loss=0.6792
 INFO:root:Epoch 2   loss=1.1421 ori_loss=0.4829 fair_loss=0.6747 
 INFO:root:
 [4.4 m] 
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:19:35 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:21:10 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:30:00 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:33:25 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:34:42 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:35:01 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:37:07 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:37:48 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:39:39 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:40:19 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:41:08 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:42:15 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:42:58 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:43:17 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:46:04 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:46:24 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:47:55 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:51:17 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:51:53 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:53:24 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:54:34 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:56:50 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Reading data from "../data/", dataset = "Movielenz", suffix = "fade", fname = "freq" 
+INFO:root:"# user": 6038, "# item": 3627, "# entry": 836478
+INFO:root:Load user_clicked_set
+INFO:root:Successfully loaded saved user_clicked_set
+INFO:root:Done! [79.46 s]
+
+INFO:root:Save corpus to ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 19:59:52 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Reading data from "../data/", dataset = "Movielenz", suffix = "fade", fname = "freq" 
+INFO:root:"# user": 6038, "# item": 3627, "# entry": 836478
+INFO:root:Load user_clicked_set
+INFO:root:Successfully loaded saved user_clicked_set
+INFO:root:Done! [73.43 s]
+
+INFO:root:Save corpus to ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 20:02:53 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Reading data from "../data/", dataset = "Movielenz", suffix = "fade", fname = "freq" 
+INFO:root:"# user": 6040, "# item": 3952, "# entry": 836478
+INFO:root:Load user_clicked_set
+INFO:root:Successfully loaded saved user_clicked_set
+INFO:root:Done! [72.15 s]
+
+INFO:root:Save corpus to ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 639488
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308

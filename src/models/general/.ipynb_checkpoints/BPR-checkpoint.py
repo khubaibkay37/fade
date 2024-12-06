@@ -16,6 +16,9 @@ class BPR(Model):
         super().__init__(args, corpus)
 
     def _define_params(self):
+        print("beem boom bup initializing model")
+        # print(self.user_num)
+        # print(self.item_num)
         self.u_embeddings = nn.Embedding(self.user_num, self.emb_size)
         self.i_embeddings = nn.Embedding(self.item_num, self.emb_size)
 
@@ -35,11 +38,14 @@ class BPR(Model):
         return prediction.view(len(u_ids), -1)
 
     def model_(self, user, items, flag):
+        # print(user)
+        # print(items)
+        # print(self.u_embeddings.weight.shape, self.i_embeddings.weight.shape)
         user = user.repeat((1, items.shape[0])).squeeze(0)
-
         cf_u_vectors = self.u_embeddings(user)
         cf_i_vectors = self.i_embeddings(items)
-
+        # print(cf_u_vectors)
+        # print(cf_i_vectors)
         prediction = (cf_u_vectors * cf_i_vectors).sum(dim=-1)
             
         return prediction

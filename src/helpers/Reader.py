@@ -64,6 +64,10 @@ class Reader(object):
         # print(self.data_df.head())
         self.n_users = self.data_df['user_id'].max()
         self.n_items = self.data_df['item_id'].max()
+        self.n_users = 6040
+        self.n_items = 3952
+
+        print("reader here", self.n_users, self.n_items)
         self.dataset_size = len(self.data_df)
         self.n_batches = math.ceil(self.dataset_size/self.batch_size)
         logging.info('"# user": {}, "# item": {}, "# entry": {}'.format(self.n_users, self.n_items, self.dataset_size))

@@ -487,11 +487,17 @@ class Tester(object):
 
         # In case of unseen test items, just use random embeddings of the model.
         # (n_items)
+        # print("runnn")
+        # print(len(neg_samples))
+        # print(len(test_pos[user]))
+        # print(neg_samples)
         candidate_items = test_pos[user] + neg_samples
-        print(user)
+        # print(user)
 
         user_ = torch.from_numpy(np.array(user))
+        # print(len(candidate_items))
         candidate_items_ = torch.from_numpy(np.array(candidate_items))
+        
         if torch.cuda.is_available():
             user_ = user_.to(model._device)
             candidate_items_ = candidate_items_.to(model._device)
@@ -567,7 +573,7 @@ class Tester(object):
 
         # For each user, there are personalized items in the recommendation list and test positive items
         # K = max(topk)
-        print(train_file)
+        # print(train_file)
         train_edges = utils.read_data_from_file_int(train_file)
         test_edges = utils.read_data_from_file_int(test_file)
         train_pos = utils.get_user_dil_from_edgelist(train_edges)
@@ -580,6 +586,9 @@ class Tester(object):
         # Generate top-k recommendation list for each user
         # num_neg_samples = -1
         random.seed(10)
+        # print(type(test_pos))
+        # print(max(test_pos.keys()), min(test_pos.keys()))
+        # print(train_pos, test_pos)
         for user in train_user_set:
             # Skip if the user is not in the test set
             if user in test_pos.keys():
