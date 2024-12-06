@@ -82,7 +82,7 @@ class Model(torch.nn.Module):
 
     def loss(self, predictions, current, data, reduction):
 
-        print("In model: ", current['attr'].unique())
+        # print("In model: ", current['attr'].unique())
         sen_attr = current['attr']
         pos_pred, neg_pred = predictions[:, 0], predictions[:, 1:1+self.num_neg] # 1 pos : self.num_neg neg
         loss = -(pos_pred[:,None] - neg_pred).sigmoid().log().mean(dim=1)

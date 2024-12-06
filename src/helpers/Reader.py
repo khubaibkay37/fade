@@ -61,6 +61,7 @@ class Reader(object):
         #logging.info('Counting dataset statistics...')
         # self.n_users = self.data_df['user_id'].nunique()
         # self.n_items = self.data_df['item_id'].nunique()
+        # print(self.data_df.head())
         self.n_users = self.data_df['user_id'].max()
         self.n_items = self.data_df['item_id'].max()
         self.dataset_size = len(self.data_df)
@@ -165,28 +166,31 @@ class Reader(object):
             os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + '.csv'), 
             sep=self.sep
         )
-        
-        # Filter out rows where the first column has a value of 0
-        filtered_array = augmented_array[augmented_array.iloc[:, 0] != 0]
-
-        # Convert the filtered DataFrame to a NumPy array
-        augmented_array = filtered_array.values.astype(np.int64)
-        snapshot_train = np.vstack([snapshot_train, augmented_array])
-
-        if idx == 0:
-            gap = 0
-        else:
-            gap = self.snap_boundaries[idx] - self.snap_boundaries[idx-1]
+            
+            # Filter out rows where the first column has a value of 0
+            filtered_array = augmented_array[augmented_array.iloc[:, 0] != 0]
+    
+            # Convert the filtered DataFrame to a NumPy array
+            augmented_array = filtered_array.values.astype(np.int64)
+            snapshot_train = np.vstack([snapshot_train, augmented_array])
+    
+            if idx == 0:
+                gap = 0
+            else:
+                gap = self.snap_boundaries[idx] - self.snap_boundaries[idx-1]
             snapshot_train_new = self.data_df[(self.n_train_batches + gap) * self.batch_size:(self.n_train_batches + snap_boundary) * self.batch_size].values.astype(np.int64)
 
             snapshot_test = self.data_df[(self.n_train_batches + snap_boundary) * self.batch_size:].values.astype(np.int64)
             utils.write_interactions_to_file(os.path.join(self.snapshots_path, 'remain_train_snap'+str(idx)), snapshot_train)
+            print("writing fileee")
+            print(os.path.join(self.snapshots_path, 'remain_train_snap'+str(idx)))
             utils.write_interactions_to_file(os.path.join(self.snapshots_path, 'remain_test_snap'+str(idx)), snapshot_test)
             #utils.write_interactions_to_file(os.path.join(self.snapshots_path, 'remain_train_new_snap'+str(idx)), snapshot_train_new)
 
             #snapshot_train = self.data_df[:(self.n_train_batches + snap_boundary) * self.batch_size].values.astype(np.int64)
             snapshot_test = self.data_df[(self.n_train_batches + self.snap_boundaries[-1]) * self.batch_size:].values.astype(np.int64)
             utils.write_interactions_to_file(os.path.join(self.snapshots_path, 'fixed_train_snap'+str(idx)), snapshot_train)
+            
             utils.write_interactions_to_file(os.path.join(self.snapshots_path, 'fixed_test_snap'+str(idx)), snapshot_test)
             #utils.write_interactions_to_file(os.path.join(self.snapshots_path, 'fixed_train_new_snap'+str(idx)), snapshot_train_new)
 
@@ -207,7 +211,6 @@ class Reader(object):
         # self.augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         # self.augmented_data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         self.data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.fname +'.csv'),
-                                   names=['user_id', 'item_id', 'timestamp'],
                                    sep=self.sep)  # Let the main runner decide the ratio of train/test
         self.data_df = self.data_df.loc[:, ['user_id', 'item_id']]    #.values.astype(np.int64) # (number of items, 2)
 

@@ -1,0 +1,47 @@
+INFO:root:Movielenz__size_0.6_256_s10__finetune__lr=0.001__l2=0.0001__epoch=3__tepoch=2__num_neg=4__num_neg_fair=4__DRM=log-onlypos__DRM_weight=1.0__tau=3.0
+INFO:root:--------------------------------------------- BEGIN: 2024-12-06 15:37:21 ---------------------------------------------
+INFO:root:cuda available: True
+INFO:root:cuda device: 0
+INFO:root:Load corpus from ../data/Movielenz/fade/size_0.6_256_s10/Reader.pkl
+INFO:root:Total instances: 836478
+INFO:root:Train instances: 501760
+INFO:root:Test instances: 334848
+INFO:root:Snap boundaries: [0, 130, 260, 390, 520, 650, 780, 910, 1040, 1170]
+INFO:root:#params: 618560
+INFO:root:fine-tuning: (pre)train n_batches: 1960
+INFO:root:fine-tuning: test n_batches: 1308
+INFO:root:Epoch 1   loss=1.2448 ori_loss=0.6728 fair_loss=0.6925 [35.5 s] 
+INFO:root:Epoch 2   loss=1.1394 ori_loss=0.5714 fair_loss=0.6876 [34.0 s] 
+INFO:root:Epoch 3   loss=1.0745 ori_loss=0.5114 fair_loss=0.6817 [35.3 s] 
+INFO:root:dyn_method: finetune
+INFO:root:test batch collecting: 123.18293285369873 s
+INFO:root:snap_idx: 0
+INFO:root:snap_idx: 1
+INFO:root:Epoch 1   loss=1.2732 ori_loss=0.5823 fair_loss=0.6909 
+INFO:root:Epoch 2   loss=1.1185 ori_loss=0.4346 fair_loss=0.6839 
+INFO:root:snap_idx: 2
+INFO:root:Epoch 1   loss=1.2570 ori_loss=0.5842 fair_loss=0.6887 
+INFO:root:Epoch 2   loss=1.1074 ori_loss=0.4408 fair_loss=0.6823 
+INFO:root:snap_idx: 3
+INFO:root:Epoch 1   loss=1.2983 ori_loss=0.6066 fair_loss=0.6971 
+INFO:root:Epoch 2   loss=1.1795 ori_loss=0.4972 fair_loss=0.6876 
+INFO:root:snap_idx: 4
+INFO:root:Epoch 1   loss=1.2559 ori_loss=0.6146 fair_loss=0.6891 
+INFO:root:Epoch 2   loss=1.1445 ori_loss=0.5077 fair_loss=0.6842 
+INFO:root:snap_idx: 5
+INFO:root:Epoch 1   loss=1.2653 ori_loss=0.6307 fair_loss=0.6933 
+INFO:root:Epoch 2   loss=1.1592 ori_loss=0.5266 fair_loss=0.6911 
+INFO:root:snap_idx: 6
+INFO:root:Epoch 1   loss=1.2525 ori_loss=0.6242 fair_loss=0.6864 
+INFO:root:Epoch 2   loss=1.1465 ori_loss=0.5204 fair_loss=0.6840 
+INFO:root:snap_idx: 7
+INFO:root:Epoch 1   loss=1.2556 ori_loss=0.6344 fair_loss=0.6843 
+INFO:root:Epoch 2   loss=1.1518 ori_loss=0.5331 fair_loss=0.6816 
+INFO:root:snap_idx: 8
+INFO:root:Epoch 1   loss=1.2945 ori_loss=0.6231 fair_loss=0.6872 
+INFO:root:Epoch 2   loss=1.1981 ori_loss=0.5320 fair_loss=0.6819 
+INFO:root:snap_idx: 9
+INFO:root:Epoch 1   loss=1.2138 ori_loss=0.5503 fair_loss=0.6792 
+INFO:root:Epoch 2   loss=1.1421 ori_loss=0.4829 fair_loss=0.6747 
+INFO:root:
+[4.4 m] 

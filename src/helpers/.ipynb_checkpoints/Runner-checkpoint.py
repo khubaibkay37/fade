@@ -172,7 +172,7 @@ class Runner(object):
             # print("In runner: ", current['attr'])
             current = utils.batch_to_gpu(utils.squeeze_dict(current), model._device)
             current['batch_size'] = len(current['user_id'])
-            print("In runner: ", current.keys())
+            # print("In runner: ", current.keys())
             loss, prediction, ori_loss, fair_loss, pd = self.train_recommender_vanilla(model, current, data)
 
             loss_lst.append(loss)
@@ -488,6 +488,7 @@ class Tester(object):
         # In case of unseen test items, just use random embeddings of the model.
         # (n_items)
         candidate_items = test_pos[user] + neg_samples
+        print(user)
 
         user_ = torch.from_numpy(np.array(user))
         candidate_items_ = torch.from_numpy(np.array(candidate_items))
@@ -566,6 +567,7 @@ class Tester(object):
 
         # For each user, there are personalized items in the recommendation list and test positive items
         # K = max(topk)
+        print(train_file)
         train_edges = utils.read_data_from_file_int(train_file)
         test_edges = utils.read_data_from_file_int(test_file)
         train_pos = utils.get_user_dil_from_edgelist(train_edges)
