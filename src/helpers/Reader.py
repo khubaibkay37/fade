@@ -59,8 +59,10 @@ class Reader(object):
         #print(self.data_df['item_id'].max(),len(self.data_df['item_id'].unique()))
 
         #logging.info('Counting dataset statistics...')
-        self.n_users = self.data_df['user_id'].nunique()
-        self.n_items = self.data_df['item_id'].nunique()
+        # self.n_users = self.data_df['user_id'].nunique()
+        # self.n_items = self.data_df['item_id'].nunique()
+        self.n_users = self.data_df['user_id'].max()
+        self.n_items = self.data_df['item_id'].max()
         self.dataset_size = len(self.data_df)
         self.n_batches = math.ceil(self.dataset_size/self.batch_size)
         logging.info('"# user": {}, "# item": {}, "# entry": {}'.format(self.n_users, self.n_items, self.dataset_size))
@@ -158,10 +160,10 @@ class Reader(object):
         for idx, snap_boundary in enumerate(self.snap_boundaries):
             snapshot_train = self.data_df[:(self.n_train_batches + snap_boundary) * self.batch_size].values.astype(np.int64)
 
-            augmented_array = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=" ").values.astype(np.int64)  # Let the main runner decide the ratio of train/test
+            augmented_array = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep).values.astype(np.int64)  # Let the main runner decide the ratio of train/test
             augmented_array = pd.read_csv(
             os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname + '.csv'), 
-            sep=" "
+            sep=self.sep
         )
         
         # Filter out rows where the first column has a value of 0
@@ -205,9 +207,9 @@ class Reader(object):
         # self.augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         # self.augmented_data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)  # Let the main runner decide the ratio of train/test
         self.data_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.fname +'.csv'),
-                                   names=['user_id', 'item_id'],
+                                   names=['user_id', 'item_id', 'timestamp'],
                                    sep=self.sep)  # Let the main runner decide the ratio of train/test
-        # self.data_df = self.df.loc[:, ['user_id', 'item_id']]#.values.astype(np.int64) # (number of items, 2)
+        self.data_df = self.data_df.loc[:, ['user_id', 'item_id']]    #.values.astype(np.int64) # (number of items, 2)
 
     def _save_user_clicked_set(self):
         user_clicked_set_path = os.path.join(self.prefix, self.dataset, self.suffix, self.s_fname, 'user_clicked_set.txt')
@@ -235,7 +237,7 @@ class Reader(object):
             os.mkdir(self.mini_batch_train_path)
 
         augmented_count = 0
-        augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=" ")
+        augmented_df = pd.read_csv(os.path.join(self.prefix, self.dataset, self.suffix, self.augmented_fname +'.csv'), sep=self.sep)
         for batch_idx in range(self.n_batches):
             data_batch = self.data_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)
             augmented_batch = augmented_df[batch_idx * self.batch_size: (batch_idx + 1) * self.batch_size].values.astype(np.int64)

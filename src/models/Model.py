@@ -82,12 +82,24 @@ class Model(torch.nn.Module):
 
     def loss(self, predictions, current, data, reduction):
 
+        print("In model: ", current['attr'].unique())
         sen_attr = current['attr']
         pos_pred, neg_pred = predictions[:, 0], predictions[:, 1:1+self.num_neg] # 1 pos : self.num_neg neg
         loss = -(pos_pred[:,None] - neg_pred).sigmoid().log().mean(dim=1)
+        # print("\nbefore In model: " , sen_attr)
+
+        # print(f"Loss shape: {loss.shape}, dtype: {loss.dtype}, loss device: {loss.device} device: {predictions.device}")
+        # if torch.isnan(loss).any():
+        #     print("Loss contains NaN values!")
+        # if torch.isinf(loss).any():
+        #     print("Loss contains Inf values!")
+        
         if reduction == 'mean':
             loss = loss.mean()
-
+        # print("after In model: " , loss)
+        # print("In model pos: ", pos_pred.shape)
+        # print("In model neg: ", neg_pred.shape)
+        
         loss_ = 0
         fl = 0
         if 'none' not in self.DRM:
@@ -97,6 +109,8 @@ class Model(torch.nn.Module):
             fairness_loss = []
 
             for bool_mask in [adv, disadv]:
+                # print("\nIn model: ", bool_mask.shape, predictions.shape)
+                # print(f"bool_mask unique values: {bool_mask.unique()}")
                 new_predictions = predictions[bool_mask]
 
                 # If there are only M/F users in the mini-batch

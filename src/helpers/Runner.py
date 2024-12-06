@@ -169,8 +169,10 @@ class Runner(object):
         #for current in tqdm(dl, leave=True, desc='Epoch {:<3}'.format(epoch), ncols=100, mininterval=1):
         flag = 0
         for current in dl:
+            # print("In runner: ", current['attr'])
             current = utils.batch_to_gpu(utils.squeeze_dict(current), model._device)
             current['batch_size'] = len(current['user_id'])
+            print("In runner: ", current.keys())
             loss, prediction, ori_loss, fair_loss, pd = self.train_recommender_vanilla(model, current, data)
 
             loss_lst.append(loss)
@@ -281,6 +283,8 @@ class Runner(object):
         # Train recommender
         model.train()
         # Get recommender's prediction and loss from the ``current'' data at t
+        # print("In runnerr, len f current: ", len(current['user_id']), len(current['item_id']))
+        
         prediction = model(current['user_id'], current['item_id'], self.DRM)
         loss, ori_loss, fair_loss, pd = model.loss(prediction, current, data, reduction='mean')
 
